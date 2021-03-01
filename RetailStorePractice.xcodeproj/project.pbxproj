@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,18 @@
 		E1D2D37925ED26EA00B5CE1D /* RetailStorePractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1D2D37725ED26EA00B5CE1D /* RetailStorePractice.xcdatamodeld */; };
 		E1D2D37B25ED26EB00B5CE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D2D37A25ED26EB00B5CE1D /* Assets.xcassets */; };
 		E1D2D37E25ED26EB00B5CE1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D2D37C25ED26EB00B5CE1D /* LaunchScreen.storyboard */; };
+		E1D2D38E25ED36A800B5CE1D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2D38D25ED36A800B5CE1D /* Product.swift */; };
+		E1D2D39125ED377F00B5CE1D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2D39025ED377F00B5CE1D /* Constants.swift */; };
+		E1D2D39A25ED469800B5CE1D /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2D39925ED469800B5CE1D /* ListInteractor.swift */; };
+		E1D2D39E25ED47D800B5CE1D /* ListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2D39D25ED47D800B5CE1D /* ListDataManager.swift */; };
+		E1D2D3A225ED4D8200B5CE1D /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2D3A125ED4D8200B5CE1D /* CoreDataStore.swift */; };
+		FBFB1AF183BB54AB1E9F9B04 /* Pods_RetailStorePractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83026772A17725B5FB771C0 /* Pods_RetailStorePractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A26B260826179186FB5CAA6 /* Pods-RetailStorePractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStorePractice.release.xcconfig"; path = "Target Support Files/Pods-RetailStorePractice/Pods-RetailStorePractice.release.xcconfig"; sourceTree = "<group>"; };
+		AEC217A41910DC840A7AF099 /* Pods-RetailStorePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStorePractice.debug.xcconfig"; path = "Target Support Files/Pods-RetailStorePractice/Pods-RetailStorePractice.debug.xcconfig"; sourceTree = "<group>"; };
+		D83026772A17725B5FB771C0 /* Pods_RetailStorePractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetailStorePractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D2D36B25ED26EA00B5CE1D /* RetailStorePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStorePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D2D36E25ED26EA00B5CE1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D2D37025ED26EA00B5CE1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,11 @@
 		E1D2D37A25ED26EB00B5CE1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1D2D37D25ED26EB00B5CE1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D2D37F25ED26EB00B5CE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D2D38D25ED36A800B5CE1D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E1D2D39025ED377F00B5CE1D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E1D2D39925ED469800B5CE1D /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		E1D2D39D25ED47D800B5CE1D /* ListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataManager.swift; sourceTree = "<group>"; };
+		E1D2D3A125ED4D8200B5CE1D /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFB1AF183BB54AB1E9F9B04 /* Pods_RetailStorePractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		699C639C4F5305FB752951F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEC217A41910DC840A7AF099 /* Pods-RetailStorePractice.debug.xcconfig */,
+				9A26B260826179186FB5CAA6 /* Pods-RetailStorePractice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D096D47935853DE5F30C1CD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D83026772A17725B5FB771C0 /* Pods_RetailStorePractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1D2D36225ED26EA00B5CE1D = {
 			isa = PBXGroup;
 			children = (
 				E1D2D36D25ED26EA00B5CE1D /* RetailStorePractice */,
 				E1D2D36C25ED26EA00B5CE1D /* Products */,
+				699C639C4F5305FB752951F2 /* Pods */,
+				D096D47935853DE5F30C1CD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +92,10 @@
 		E1D2D36D25ED26EA00B5CE1D /* RetailStorePractice */ = {
 			isa = PBXGroup;
 			children = (
+				E1D2D3A025ED4D3300B5CE1D /* Store */,
+				E1D2D39425ED45D400B5CE1D /* List */,
+				E1D2D39025ED377F00B5CE1D /* Constants.swift */,
+				E1D2D38C25ED368F00B5CE1D /* Model */,
 				E1D2D36E25ED26EA00B5CE1D /* AppDelegate.swift */,
 				E1D2D37025ED26EA00B5CE1D /* SceneDelegate.swift */,
 				E1D2D37225ED26EA00B5CE1D /* ViewController.swift */,
@@ -70,6 +108,63 @@
 			path = RetailStorePractice;
 			sourceTree = "<group>";
 		};
+		E1D2D38C25ED368F00B5CE1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2D38D25ED36A800B5CE1D /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1D2D39425ED45D400B5CE1D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2D39625ED464700B5CE1D /* ApplicationLogic */,
+				E1D2D39525ED463800B5CE1D /* UserInterface */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		E1D2D39525ED463800B5CE1D /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		E1D2D39625ED464700B5CE1D /* ApplicationLogic */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2D39825ED466800B5CE1D /* Manager */,
+				E1D2D39725ED465900B5CE1D /* Interactor */,
+			);
+			path = ApplicationLogic;
+			sourceTree = "<group>";
+		};
+		E1D2D39725ED465900B5CE1D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2D39925ED469800B5CE1D /* ListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E1D2D39825ED466800B5CE1D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2D39D25ED47D800B5CE1D /* ListDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E1D2D3A025ED4D3300B5CE1D /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2D3A125ED4D8200B5CE1D /* CoreDataStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D2D38225ED26EB00B5CE1D /* Build configuration list for PBXNativeTarget "RetailStorePractice" */;
 			buildPhases = (
+				E569D1B934FFD6A870379EEF /* [CP] Check Pods Manifest.lock */,
 				E1D2D36725ED26EA00B5CE1D /* Sources */,
 				E1D2D36825ED26EA00B5CE1D /* Frameworks */,
 				E1D2D36925ED26EA00B5CE1D /* Resources */,
+				5992BDBF4833633450C0650E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,15 +232,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5992BDBF4833633450C0650E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetailStorePractice/Pods-RetailStorePractice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetailStorePractice/Pods-RetailStorePractice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetailStorePractice/Pods-RetailStorePractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E569D1B934FFD6A870379EEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetailStorePractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1D2D36725ED26EA00B5CE1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D2D3A225ED4D8200B5CE1D /* CoreDataStore.swift in Sources */,
 				E1D2D37325ED26EA00B5CE1D /* ViewController.swift in Sources */,
+				E1D2D39E25ED47D800B5CE1D /* ListDataManager.swift in Sources */,
 				E1D2D36F25ED26EA00B5CE1D /* AppDelegate.swift in Sources */,
+				E1D2D38E25ED36A800B5CE1D /* Product.swift in Sources */,
+				E1D2D39A25ED469800B5CE1D /* ListInteractor.swift in Sources */,
 				E1D2D37925ED26EA00B5CE1D /* RetailStorePractice.xcdatamodeld in Sources */,
 				E1D2D37125ED26EA00B5CE1D /* SceneDelegate.swift in Sources */,
+				E1D2D39125ED377F00B5CE1D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +431,7 @@
 		};
 		E1D2D38325ED26EB00B5CE1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC217A41910DC840A7AF099 /* Pods-RetailStorePractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +451,7 @@
 		};
 		E1D2D38425ED26EB00B5CE1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A26B260826179186FB5CAA6 /* Pods-RetailStorePractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

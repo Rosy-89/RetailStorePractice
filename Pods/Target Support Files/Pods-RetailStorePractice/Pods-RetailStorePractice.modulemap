@@ -1,0 +1,6 @@
+framework module Pods_RetailStorePractice {
+  umbrella header "Pods-RetailStorePractice-umbrella.h"
+
+  export *
+  module * { export * }
+}
