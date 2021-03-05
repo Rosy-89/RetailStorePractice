@@ -9,8 +9,8 @@ import Foundation
 
 struct Product{
     var name: String!
-    var productId: UUID!
-    var categoryId: UUID!
+    var productId: NSNumber!
+    var categoryId: NSNumber!
     var price: NSNumber!
     var imageName: String!
 }

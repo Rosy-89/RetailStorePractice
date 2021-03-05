@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:StoreEntity+CoreDataClass.swift">
+      location = "group:CartEntity+CoreDataClass.swift">
    </FileRef>
    <FileRef
-      location = "group:StoreEntity+CoreDataProperties.swift">
+      location = "group:CartEntity+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:RetailStorePractice.xcodeproj">
