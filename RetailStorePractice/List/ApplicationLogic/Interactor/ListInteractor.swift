@@ -20,6 +20,23 @@ class ListInteractor {
         self.dataManager = dataManager
     }
     
+    func fetchCartItemsFromStore() -> Observable<[CartItem]> {
+        
+            var array = self.cartItems.value
+            array.removeAll()
+            self.cartItems.accept(array)
+            print(dataManager.cartItems as Any)
+            for item in dataManager.cartItems {
+                array.append(item)
+            }
+            print(array as Any)
+            self.cartItems.accept(array)
+            return Observable.create { observer in
+                observer.onNext(self.cartItems.value)
+                return Disposables.create()
+            }
+        }
+    
     func fetchProductsFromStore() {
         var array = self.products.value
         array.removeAll()
@@ -28,12 +45,8 @@ class ListInteractor {
             
             array.append(prod)
         }
-     
         self.products.accept(array)
-        
-        
     }
-    
     
     func cartItemProducts(cartItems: [CartItem]) -> [Product] {
         var filteredProducts = [Product]()
@@ -45,6 +58,7 @@ class ListInteractor {
         }
         return filteredProducts
     }
+    
     func sectionedData(data: [Product]) -> [SectionModel<NSNumber, Product>] {
        
         var sectioned = [SectionModel<NSNumber, Product>]()
@@ -59,8 +73,6 @@ class ListInteractor {
         
         return removeEmptySections(sectionArray: sectioned)
     }
-    
-    
     
     func removeEmptySections(sectionArray: [SectionModel<NSNumber, Product>]) -> [SectionModel<NSNumber, Product>]  {
         var filteredSections = [SectionModel<NSNumber, Product>]()

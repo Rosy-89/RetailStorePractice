@@ -8,8 +8,8 @@
 import Foundation
 import CoreData
 
-
 class DetailManager {
+    
     var dataStore = CoreDataStore.sharedInstance
  
     func saveMOC() {
@@ -24,10 +24,15 @@ class DetailManager {
         dataStore.deleteObject(cartItem: cartItem)
     }
     
+//    func cartItemsFromStore(_ completion: (([CartItem]) -> Void)!) {
+//        dataStore.fetchEntriesWithPredicate({ entries in
+//            completion(entries)
+//        })
+//    }
     func cartItemsFromStore(_ completion: (([CartItem]) -> Void)!) {
-        dataStore.fetchEntriesWithPredicate({ entries in
+        dataStore.fetchCartItems { (entries) in
             completion(entries)
-        })
+        }
     }
     
     func save(cartItem: CartItem) {

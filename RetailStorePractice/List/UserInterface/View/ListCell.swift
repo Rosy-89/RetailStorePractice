@@ -24,7 +24,7 @@ class ListCell: UITableViewCell {
         
         nameLabel.text = productName
         productImageView.image = UIImage(named: product.imageName)
-        priceLabel.text = productPrice.stringValue
+        priceLabel.text = "£" + productPrice.stringValue
     }
     
 }

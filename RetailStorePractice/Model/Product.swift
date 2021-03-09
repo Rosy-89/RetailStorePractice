@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Product{
+class Product{
     var name: String!
     var productId: NSNumber!
     var categoryId: NSNumber!

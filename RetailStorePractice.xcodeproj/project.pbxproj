@@ -210,8 +210,8 @@
 		E1BC6DF825F14B620012BBE7 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC6DF925F14B620012BBE7 /* ApplicationLogic */,
 				E1BC6DFE25F14B620012BBE7 /* UserInterface */,
+				E1BC6DF925F14B620012BBE7 /* ApplicationLogic */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 		E1BC6DF925F14B620012BBE7 /* ApplicationLogic */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC6DFA25F14B620012BBE7 /* Manager */,
 				E1BC6DFC25F14B620012BBE7 /* Interactor */,
+				E1BC6DFA25F14B620012BBE7 /* Manager */,
 			);
 			path = ApplicationLogic;
 			sourceTree = "<group>";
@@ -244,9 +244,9 @@
 		E1BC6DFE25F14B620012BBE7 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC6DFF25F14B620012BBE7 /* Presenter */,
 				E1BC6E0125F14B620012BBE7 /* WireFrame */,
 				E1BC6E0325F14B620012BBE7 /* View */,
+				E1BC6DFF25F14B620012BBE7 /* Presenter */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -303,11 +303,11 @@
 				E1AB5A3225EE8F3B00A5CF35 /* WireFrame */,
 				E1D2D3D825ED9C9100B5CE1D /* Resources */,
 				E1D2D3A025ED4D3300B5CE1D /* Store */,
-				E1D2D39025ED377F00B5CE1D /* Constants.swift */,
 				E1D2D38C25ED368F00B5CE1D /* Model */,
-				E1BC6DBA25F1202F0012BBE7 /* Detail */,
 				E1BC6DF825F14B620012BBE7 /* List */,
+				E1BC6DBA25F1202F0012BBE7 /* Detail */,
 				E174407B25EFC493005815DE /* AppDependencies.swift */,
+				E1D2D39025ED377F00B5CE1D /* Constants.swift */,
 				E1D2D36E25ED26EA00B5CE1D /* AppDelegate.swift */,
 				E1D2D37025ED26EA00B5CE1D /* SceneDelegate.swift */,
 				E1BC6DA425F113840012BBE7 /* Assets.xcassets */,

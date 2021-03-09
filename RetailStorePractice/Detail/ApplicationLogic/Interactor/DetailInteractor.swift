@@ -9,6 +9,7 @@
 import Foundation
 
 class DetailInteractor {
+    
     var detailManager : DetailManager?
     
     init(detailManager: DetailManager) {

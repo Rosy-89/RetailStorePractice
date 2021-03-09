@@ -30,39 +30,45 @@ class ListPresenter {
     
     func updateView(screenType: ScreenType) {
         //Cart Items
-        listInteractor?.fetchProductsFromStore()
-        listInteractor?.products
-            .asObservable().subscribe( {onNext in
-                guard let cartItems = self.listInteractor?.cartItems else {
-                    return
-                }
-               
-                if let filteredProducts = self.listInteractor?.cartItemProducts(cartItems: cartItems.value) {
-                    if let sectioned = self.listInteractor?.sectionedData(data: filteredProducts) {
-                        if (screenType == .Cart) {
+        if screenType == .Cart {
+            listInteractor?.fetchCartItemsFromStore()
+                .asObservable().subscribe( {onNext in
+                    guard let cartItems = self.listInteractor?.cartItems else {
+                        return
+                    }
+                    //print(cartItems)
+                    
+                    if let filteredProducts = self.listInteractor?.cartItemProducts(cartItems: cartItems.value) {
+                        print(cartItems.value)
+                        if let sectioned = self.listInteractor?.sectionedData(data: filteredProducts) {
+                            print(sectioned as Any)
+                            if (screenType == .Cart) {
+                                self.updateUserInterface(withSectionedProducts: sectioned)
+                            }
+                        }
+                    }
+                })
+                .disposed(by:disposeBag)
+        }
+        if screenType == .List {
+            //Products
+            listInteractor?.fetchProductsFromStore()
+            listInteractor?.products
+                .asObservable().subscribe( {onNext in
+                    guard let products = self.listInteractor?.products else {
+                        return
+                    }
+                    if let sectioned = self.listInteractor?.sectionedData(data: products.value) {
+                        print(products)
+                        print(products.value)
+                        if (screenType == .List) {
                             self.updateUserInterface(withSectionedProducts: sectioned)
                         }
                     }
-                }
-            })
-            .disposed(by:disposeBag)
-
-        //Products
-        listInteractor?.fetchProductsFromStore()
-        listInteractor?.products
-        .asObservable().subscribe( {onNext in
-            guard let products = self.listInteractor?.products else {
-                return
-            }
-            if let sectioned = self.listInteractor?.sectionedData(data: products.value) {
-                if (screenType == .List) {
-                    self.updateUserInterface(withSectionedProducts: sectioned)
-                }
-            }
-        })
-            .disposed(by:disposeBag)
+                })
+                .disposed(by:disposeBag)
+        }
     }
-    
     
     func showDetail(product: Product) {
         listWireframe?.navigateToDetail(withProduct: product)
@@ -71,7 +77,6 @@ class ListPresenter {
     func deleteCartItem(withProductId productId: Int16) {
         listInteractor?.deleteCartItem(withProductId: productId)
     }
-    
-
 }
+
 

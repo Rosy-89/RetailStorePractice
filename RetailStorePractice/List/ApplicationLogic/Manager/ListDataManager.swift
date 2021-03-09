@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class ListDataManager {
     
     var coreDataStore = CoreDataStore.sharedInstance

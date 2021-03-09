@@ -27,7 +27,7 @@ class ListWireframe : NSObject {
     
     func navigate(toCart fromViewController: UIViewController) {
         let cartViewController = configuredListViewController()
-        //cartViewController.screenType = .Cart
+        cartViewController.screenType = .Cart
         fromViewController.navigationController?.pushViewController(cartViewController, animated: true)
     }
     

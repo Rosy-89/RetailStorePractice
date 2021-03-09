@@ -15,7 +15,7 @@ class TotalCell: UITableViewCell {
     @IBOutlet private var totalPriceLabel: UILabel!
     
     func configure(withPrice price: Int) {
-        totalPriceLabel.text = "$ \(price)"
+        totalPriceLabel.text = "Total: £ \(price)"
     }
     
 }

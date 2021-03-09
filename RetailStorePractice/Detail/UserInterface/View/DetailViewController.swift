@@ -11,9 +11,10 @@ import RxSwift
 import RxCocoa
 
 class DetailViewController: UIViewController, Cart {
+    
     var eventHandler : DetailPresenter?
-
     var product: Product?
+    
     @IBOutlet weak var nameLabel : UILabel!
     @IBOutlet weak var priceLabel : UILabel!
     @IBOutlet weak var imageView : UIImageView!
@@ -32,7 +33,6 @@ class DetailViewController: UIViewController, Cart {
         super.viewWillAppear(animated)
 
         updateCartCount()
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -51,16 +51,13 @@ class DetailViewController: UIViewController, Cart {
 
         //Binding data
         nameLabel.text = product?.name
-        priceLabel.text = "Rs. " + (product?.price.stringValue)!
+        priceLabel.text = "£" + (product?.price.stringValue)!
         if let imageName = product?.imageName {
             imageView.image = UIImage(named: imageName)
         }
-
     }
 
-
-    //MARK:
-    //MARK: Actions
+    //MARK:- Actions
     @IBAction func addToCartButtonTapped(_ sender: Any) {
         if let productId = product?.productId {
             eventHandler?.add(toCart: productId)
@@ -69,11 +66,9 @@ class DetailViewController: UIViewController, Cart {
         }
     }
 
-    //MARK:
-    //MARK: Cart Protocol Methods
+    //MARK:- Cart Protocol Methods
     func cartIconTapped() {
         //Tapped
         navigate(toCart: self)
     }
-
 }
